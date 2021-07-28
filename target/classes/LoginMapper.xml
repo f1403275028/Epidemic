@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace绑定一个对应的Mapper接口-->
+<mapper namespace="com.example.dao.LoginMapper">
+
+    <select id="queryUser" resultType="com.example.pojo.Login">
+        select * from number_of_outbreaks.login;
+    </select>
+
+    <insert id="addUser" parameterType="com.example.pojo.Login">
+        insert into number_of_outbreaks.login(username,password) values (#{username},#{password});
+    </insert>
+</mapper>

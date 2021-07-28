@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Signin Template for Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
+
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{/asserts/css/bootstrap.min.css}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link th:href="@{/asserts/css/sigin.css}" rel="stylesheet">
+</head>
+
+<body class="text-center">
+<form class="form-signin" th:action="@{/user/login}">
+    <img class="mb-4" th:src="@{/asserts/img/YUI-MHCP001.ico}" alt="" width="250" height="150">
+    <h1 class="h3 mb-3 font-weight-normal" th:text="#{login.tip}">Please sign in</h1>
+    <input type="email" name="username" class="form-control" th:placeholder="#{login.username}" required autofocus>
+    <input type="password" name="password" class="form-control" th:placeholder="#{login.password}" required>
+    <div class="checkbox mb-3">
+        <label >
+            <input type="checkbox" value="remember-me"> [[#{login.remember}]]
+        </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" th:text="#{login.btn}">Sign in</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2020-2021</p>
+    <a class="btn btn-sm" th:href="@{/index(language='zh_CN')}">中文</a>
+    <a class="btn btn-sm" th:href="@{/index(language='en_US')}">English</a>
+    <div>
+    <a class="btn btn-sm" th:href="@{/Dashboard/}" th:text="#{login.management}">疫情人数管理系统入口</a>
+    </div>
+    <a class="btn btn-sm" th:href="@{/user/addUser}" th:text="#{login.Registered}">注册新用户</a>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace绑定一个对应的Mapper接口-->
+<mapper namespace="com.example.dao.Epidemic_NumberMapper">
+
+    <select id="queryNumList" resultType="com.example.pojo.Epidemic_Number">
+        select * from number_of_outbreaks.epidemic_number;
+    </select>
+
+    <select id="queryNumListByArea" resultType="com.example.pojo.Epidemic_Number" parameterType="String">
+        select * from number_of_outbreaks.epidemic_number where area = #{area};
+    </select>
+
+
+    <update id="updateNum" parameterType="com.example.pojo.Epidemic_Number">
+        update number_of_outbreaks.epidemic_number set addnum=#{addnum},total=#{total},cure=#{cure},dead=#{dead} where area=#{area};
+    </update>
+
+    <insert id="addNum" parameterType="com.example.pojo.Epidemic_Number">
+        insert into number_of_outbreaks.epidemic_number(area,addnum,total,cure,dead) values (#{area},#{addnum},#{total},#{cure},#{dead});
+    </insert>
+
+    <delete id="deleteNumByArea" parameterType="String">
+        delete from number_of_outbreaks.epidemic_number where area=#{area};
+    </delete>
+
+    <delete id="deletenewByArea" parameterType="String">
+        delete from number_of_outbreaks.newadd where area=#{area};
+    </delete>
+
+    <insert id="addNew" parameterType="com.example.pojo.NewAdd">
+        insert into number_of_outbreaks.newadd(area,num) values (#{area},#{num});
+    </insert>
+
+    <select id="queryNewList" resultType="com.example.pojo.NewAdd">
+        select * from number_of_outbreaks.newadd;
+    </select>
+
+
+</mapper>

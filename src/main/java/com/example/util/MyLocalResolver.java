@@ -8,7 +8,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Locale;
 
-
+/**
+ * @author Zenglin.Fang
+ * @ClassName MyLocalResolver
+ * @Description:
+ * @Data: 2021/2/23 14:45
+ **/
 public class MyLocalResolver implements LocaleResolver {
 
     //解析请求

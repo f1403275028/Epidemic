@@ -39,7 +39,7 @@ server:
 
 mybatis:
   type-aliases-package: com.example.pojo
-  mapper-locations: Epidemic_NumberMapper.xml , LoginMapper.xml
+  mapper-locations: classpath:mapper/*.xml
 
 
 

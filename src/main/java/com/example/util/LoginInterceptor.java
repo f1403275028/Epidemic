@@ -6,7 +6,12 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
+/**
+ * @author Zenglin.Fang
+ * @ClassName LoginInterceptor
+ * @Description:
+ * @Data: 2021/3/13 14:56
+ **/
 public class LoginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {

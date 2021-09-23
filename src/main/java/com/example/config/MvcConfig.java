@@ -9,6 +9,12 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+/**
+ * @author Zenglin.Fang
+ * @ClassName MvcConfig
+ * @Description:
+ * @Data: 2021/2/13 14:58
+ **/
 @Configuration
 public class MvcConfig implements WebMvcConfigurer {
 

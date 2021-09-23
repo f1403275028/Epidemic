@@ -13,6 +13,12 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.ArrayList;
 
+/**
+ * @author Zenglin.Fang
+ * @ClassName SwaggerConfig
+ * @Description:
+ * @Data: 2021/2/13 14:58
+ **/
 @Configuration
 /*开启Swagger2*/
 @EnableSwagger2 /*  :/swagger-ui.html */
@@ -55,7 +61,7 @@ public class SwaggerConfig {
 
         return new ApiInfo(
                 "Epidemic Swagger",
-                "fzl最帅",
+                "疫情人数",
                 "1.0",
                 "https://blog.csdn.net/weixin_44976835",
                 contact,

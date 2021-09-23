@@ -8,6 +8,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * @author Zenglin.Fang
+ * @ClassName Epidemic_NumberServiceImpl
+ * @Description:
+ * @Data: 2021/2/23 14:45
+ **/
 @Service
 public class Epidemic_NumberServiceImpl implements Epidemic_NumberService{
 

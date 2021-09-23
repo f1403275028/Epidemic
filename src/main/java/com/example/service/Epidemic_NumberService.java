@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
 @Service
 public interface Epidemic_NumberService {
     /**查询所有地区人数*/

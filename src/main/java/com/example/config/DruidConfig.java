@@ -14,6 +14,12 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @author Zenglin.Fang
+ * @ClassName DruidConfig
+ * @Description:
+ * @Data: 2021/2/13 14:58
+ **/
 @Configuration
 public class DruidConfig {
 
